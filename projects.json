@@ -1,0 +1,18 @@
+{
+    "projects": [
+        {
+            "title": "Luxo App",
+            "image": "https://images.unsplash.com/photo-1516321310763-383e6f236bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+            "description": "A premium web application with seamless animations and user interactions.",
+            "downloadLink": "https://example.com/download/luxo-app",
+            "demoLink": "https://example.com/demo/luxo-app"
+        },
+        {
+            "title": "GoLuxo Dashboard",
+            "image": "https://images.unsplash.com/photo-1461749288671-6f183fb77e03?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+            "description": "A dynamic dashboard for managing projects with a sleek, modern design.",
+            "downloadLink": "https://example.com/download/goluxo-dashboard",
+            "demoLink": "https://example.com/demo/goluxo-dashboard"
+        }
+    ]
+}
