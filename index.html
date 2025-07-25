@@ -1,39 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <!-- SEO Meta Tags -->
-    <title>GoLuxo - Premium Web Development & Digital Experiences</title>
-    <meta name="description" content="GoLuxo creates extraordinary digital experiences with cutting-edge web development, stunning animations, and innovative design solutions.">
-    <meta name="keywords" content="web development, portfolio, digital experiences, animations, frontend developer, UI/UX design">
+    <!-- Primary Meta Tags -->
+    <title>GoLuxo 2.0 - Revolutionary Digital Experiences | Next-Gen Portfolio</title>
+    <meta name="title" content="GoLuxo 2.0 - Revolutionary Digital Experiences | Next-Gen Portfolio">
+    <meta name="description" content="Experience the future of web development with GoLuxo 2.0. Featuring WebGL effects, AI-powered interactions, real-time 3D graphics, and cutting-edge animations that redefine digital experiences.">
+    <meta name="keywords" content="web development, portfolio, WebGL, three.js, AI, machine learning, 3D graphics, animations, next-gen, revolutionary, cutting-edge">
     <meta name="author" content="GoLuxo">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://goluxomgmt.com/">
-    <meta property="og:title" content="GoLuxo - Premium Web Development">
-    <meta property="og:description" content="Crafting extraordinary digital experiences with innovation and elegance.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1516321310763-383e6f236bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:title" content="GoLuxo 2.0 - Revolutionary Digital Experiences">
+    <meta property="og:description" content="Experience the future of web development with WebGL effects, AI-powered interactions, and cutting-edge animations.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="GoLuxo 2.0">
+    <meta property="og:locale" content="en_US">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://goluxomgmt.com/">
-    <meta property="twitter:title" content="GoLuxo - Premium Web Development">
-    <meta property="twitter:description" content="Crafting extraordinary digital experiences with innovation and elegance.">
-    <meta property="twitter:image" content="https://images.unsplash.com/photo-1516321310763-383e6f236bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="twitter:title" content="GoLuxo 2.0 - Revolutionary Digital Experiences">
+    <meta property="twitter:description" content="Experience the future of web development with WebGL effects, AI-powered interactions, and cutting-edge animations.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="twitter:creator" content="@goluxo">
+    <meta property="twitter:site" content="@goluxo">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌟</text></svg>">
+    <!-- Favicon & App Icons -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#000000">
+    <meta name="msapplication-TileColor" content="#000000">
     
     <!-- Preload Critical Resources -->
     <link rel="preload" href="styles.css" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" as="script">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js" as="script">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -41,164 +65,611 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "GoLuxo",
-        "jobTitle": "Web Developer & Digital Creator",
-        "description": "Crafting extraordinary digital experiences with innovation and elegance",
+        "jobTitle": "Revolutionary Web Developer & Digital Creator",
+        "description": "Creating the future of digital experiences with cutting-edge web technologies, AI, and immersive 3D graphics",
         "url": "https://goluxomgmt.com",
+        "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         "sameAs": [
             "https://github.com/goluxo",
-            "https://linkedin.com/in/goluxo"
-        ]
+            "https://linkedin.com/in/goluxo",
+            "https://twitter.com/goluxo",
+            "https://dribbble.com/goluxo"
+        ],
+        "knowsAbout": [
+            "WebGL", "Three.js", "AI/ML", "React", "Vue.js", "Node.js", "3D Graphics", "Web Animation"
+        ],
+        "worksFor": {
+            "@type": "Organization",
+            "name": "GoLuxo Digital"
+        }
     }
     </script>
+    
+    <!-- Performance Monitoring -->
+    <script>
+        // Performance monitoring
+        window.performance.mark('start-loading');
+        
+        // Feature detection
+        window.supportsWebGL = (function() {
+            try {
+                const canvas = document.createElement('canvas');
+                return !!(window.WebGLRenderingContext && 
+                    (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')));
+            } catch(e) {
+                return false;
+            }
+        })();
+        
+        // Device detection
+        window.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        window.isHighDPI = window.devicePixelRatio > 1;
+        
+        // Preload critical images
+        const criticalImages = [
+            'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            'https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+        ];
+        
+        criticalImages.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+    </script>
 </head>
-<body>
-    <!-- Skip to main content for accessibility -->
+<body class="loading">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="logo-animation">
+                    <span class="logo-text">GoLuxo</span>
+                    <div class="logo-particles"></div>
+                </div>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="loading-text">Initializing Experience...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skip Links -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <!-- Theme Toggle -->
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
-        <span class="theme-icon">🌙</span>
-    </button>
-    
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <div class="logo" aria-label="GoLuxo Home">GoLuxo</div>
-        <ul class="nav-links" role="menubar">
-            <li role="none"><a href="#home" role="menuitem" aria-current="page">Home</a></li>
-            <li role="none"><a href="#about" role="menuitem">About</a></li>
-            <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
-            <li role="none"><a href="#blog" role="menuitem">Blog</a></li>
-            <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
-        </ul>
-        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+    <a href="#navigation" class="skip-link">Skip to navigation</a>
+
+    <!-- Cursor -->
+    <div id="custom-cursor" class="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navigation" class="navigation" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#home" class="brand-link" aria-label="GoLuxo Home">
+                    <span class="brand-text">GoLuxo</span>
+                    <span class="brand-version">2.0</span>
+                </a>
+            </div>
+            
+            <ul class="nav-menu" role="menubar">
+                <li role="none">
+                    <a href="#home" role="menuitem" aria-current="page" class="nav-link">
+                        <span class="nav-icon">🏠</span>
+                        <span class="nav-text">Home</span>
+                    </a>
+                </li>
+                <li role="none">
+                    <a href="#about" role="menuitem" class="nav-link">
+                        <span class="nav-icon">👨‍💻</span>
+                        <span class="nav-text">About</span>
+                    </a>
+                </li>
+                <li role="none">
+                    <a href="#projects" role="menuitem" class="nav-link">
+                        <span class="nav-icon">🚀</span>
+                        <span class="nav-text">Projects</span>
+                    </a>
+                </li>
+                <li role="none">
+                    <a href="#skills" role="menuitem" class="nav-link">
+                        <span class="nav-icon">⚡</span>
+                        <span class="nav-text">Skills</span>
+                    </a>
+                </li>
+                <li role="none">
+                    <a href="#blog" role="menuitem" class="nav-link">
+                        <span class="nav-icon">📝</span>
+                        <span class="nav-text">Blog</span>
+                    </a>
+                </li>
+                <li role="none">
+                    <a href="#contact" role="menuitem" class="nav-link">
+                        <span class="nav-icon">📧</span>
+                        <span class="nav-text">Contact</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="nav-controls">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
     </nav>
 
-    <main id="main-content">
-        <section id="home" class="hero" aria-label="Hero section">
+    <!-- Main Content -->
+    <main id="main-content" class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section" aria-label="Hero section">
+            <div class="hero-background">
+                <canvas id="hero-canvas" class="hero-canvas"></canvas>
+                <div class="hero-overlay"></div>
+            </div>
+            
             <div class="hero-content">
-                <h1 class="fade-in">Welcome to GoLuxo</h1>
-                <p class="fade-in">Crafting Extraordinary Digital Experiences</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="cta-button primary">Discover My Work</a>
-                    <a href="#contact" class="cta-button secondary">Get In Touch</a>
-                </div>
-            </div>
-            <div class="hero-bg">
-                <div class="particle-container" aria-hidden="true"></div>
-            </div>
-        </section>
-
-        <section id="about" class="section" aria-label="About section">
-            <h2 class="section-title">About GoLuxo</h2>
-            <div class="about-content">
-                <img src="https://images.unsplash.com/photo-1516321310763-383e6f236bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-                     alt="GoLuxo - Web Developer and Digital Creator" 
-                     class="about-photo slide-in"
-                     loading="lazy">
-                <div class="about-text slide-in">
-                    <p>GoLuxo is the vision of a passionate creator dedicated to pushing the boundaries of web development. With a focus on innovation, elegance, and functionality, I craft digital experiences that captivate and inspire.</p>
-                    <p>My expertise spans modern web technologies, creative design solutions, and performance optimization. Every project is an opportunity to create something extraordinary.</p>
-                    <div class="skills">
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">UI/UX</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="section" aria-label="Projects section">
-            <h2 class="section-title">Featured Projects</h2>
-            <div id="projects-container" class="projects-grid">
-                <div class="loading-spinner" id="projects-loading">
-                    <div class="spinner"></div>
-                    <p>Loading projects...</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="blog" class="section" aria-label="Blog section">
-            <h2 class="section-title">Latest Insights</h2>
-            <div id="blog-container" class="blog-grid">
-                <div class="loading-spinner" id="blog-loading">
-                    <div class="spinner"></div>
-                    <p>Loading blog posts...</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section" aria-label="Contact section">
-            <h2 class="section-title">Let's Create Something Amazing</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <p>Ready to bring your vision to life? Let's discuss your next project and create something extraordinary together.</p>
-                    <div class="contact-methods">
-                        <a href="mailto:hello@goluxomgmt.com" class="contact-method">
-                            <span class="contact-icon">📧</span>
-                            <span>hello@goluxomgmt.com</span>
-                        </a>
-                        <a href="tel:+1234567890" class="contact-method">
-                            <span class="contact-icon">📞</span>
-                            <span>+1 (234) 567-890</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="contact-form-container">
-                    <form id="contact-form" class="contact-form" novalidate>
-                        <div class="form-group">
-                            <label for="name" class="visually-hidden">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your Name" required aria-describedby="name-error">
-                            <div id="name-error" class="error-message" role="alert"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="visually-hidden">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Your Email" required aria-describedby="email-error">
-                            <div id="email-error" class="error-message" role="alert"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="message" class="visually-hidden">Message</label>
-                            <textarea id="message" name="message" placeholder="Tell me about your project..." required aria-describedby="message-error" rows="5"></textarea>
-                            <div id="message-error" class="error-message" role="alert"></div>
-                        </div>
-                        <button type="submit" class="cta-button primary" id="submit-btn">
-                            <span class="btn-text">Send Message</span>
-                            <span class="btn-loading" style="display: none;">Sending...</span>
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">Welcome to the</span>
+                        <span class="title-line highlight">Future of Web</span>
+                        <span class="title-line">Development</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Experience revolutionary digital interactions powered by WebGL, AI, and cutting-edge animations
+                    </p>
+                    <div class="hero-actions">
+                        <button class="cta-button primary" data-section="projects">
+                            <span class="button-text">Explore Projects</span>
+                            <span class="button-icon">→</span>
                         </button>
-                    </form>
+                        <button class="cta-button secondary" data-section="contact">
+                            <span class="button-text">Start Project</span>
+                            <span class="button-icon">✨</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="floating-elements">
+                        <div class="floating-element" data-speed="0.5">🚀</div>
+                        <div class="floating-element" data-speed="0.8">⚡</div>
+                        <div class="floating-element" data-speed="1.2">🎯</div>
+                        <div class="floating-element" data-speed="0.6">💎</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+                <span class="scroll-text">Scroll to explore</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section" aria-label="About section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">About GoLuxo 2.0</h2>
+                    <p class="section-subtitle">Revolutionizing digital experiences with next-generation technologies</p>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-visual">
+                        <div class="profile-container">
+                            <div class="profile-image">
+                                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                     alt="GoLuxo - Revolutionary Web Developer" 
+                                     loading="lazy">
+                                <div class="profile-overlay">
+                                    <div class="tech-badges">
+                                        <span class="tech-badge">WebGL</span>
+                                        <span class="tech-badge">AI/ML</span>
+                                        <span class="tech-badge">3D</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-text">
+                        <div class="about-intro">
+                            <h3>Creating the Future of Digital Experiences</h3>
+                            <p>GoLuxo 2.0 represents the pinnacle of web development innovation. We combine cutting-edge technologies like WebGL, artificial intelligence, and real-time 3D graphics to create experiences that transcend traditional web boundaries.</p>
+                        </div>
+                        
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number" data-target="150">0</div>
+                                <div class="stat-label">Projects Completed</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-target="5">0</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-target="99">0</div>
+                                <div class="stat-label">Client Satisfaction</div>
+                            </div>
+                        </div>
+                        
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">🎨</div>
+                                <div class="feature-content">
+                                    <h4>Immersive Design</h4>
+                                    <p>3D environments and interactive experiences that engage users on a deeper level</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🤖</div>
+                                <div class="feature-content">
+                                    <h4>AI Integration</h4>
+                                    <p>Machine learning algorithms that adapt and personalize user experiences in real-time</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">⚡</div>
+                                <div class="feature-content">
+                                    <h4>Performance Optimized</h4>
+                                    <p>Lightning-fast loading times and smooth 60fps animations across all devices</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section" aria-label="Projects section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Revolutionary Projects</h2>
+                    <p class="section-subtitle">Pushing the boundaries of what's possible on the web</p>
+                </div>
+                
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="webgl">WebGL</button>
+                    <button class="filter-btn" data-filter="ai">AI/ML</button>
+                    <button class="filter-btn" data-filter="3d">3D Graphics</button>
+                    <button class="filter-btn" data-filter="interactive">Interactive</button>
+                </div>
+                
+                <div id="projects-container" class="projects-grid">
+                    <div class="loading-spinner">
+                        <div class="spinner"></div>
+                        <p>Loading revolutionary projects...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section" aria-label="Skills section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Cutting-Edge Skills</h2>
+                    <p class="section-subtitle">Mastering the technologies that define the future</p>
+                </div>
+                
+                <div class="skills-content">
+                    <div class="skills-categories">
+                        <div class="skill-category">
+                            <h3 class="category-title">Frontend Revolution</h3>
+                            <div class="skills-grid">
+                                <div class="skill-item" data-skill="WebGL">
+                                    <div class="skill-icon">🎨</div>
+                                    <div class="skill-info">
+                                        <h4>WebGL & Three.js</h4>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-progress="95"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-skill="React">
+                                    <div class="skill-icon">⚛️</div>
+                                    <div class="skill-info">
+                                        <h4>React & Next.js</h4>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-progress="98"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-skill="Vue">
+                                    <div class="skill-icon">💚</div>
+                                    <div class="skill-info">
+                                        <h4>Vue.js & Nuxt</h4>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-progress="92"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h3 class="category-title">AI & Machine Learning</h3>
+                            <div class="skills-grid">
+                                <div class="skill-item" data-skill="TensorFlow">
+                                    <div class="skill-icon">🧠</div>
+                                    <div class="skill-info">
+                                        <h4>TensorFlow.js</h4>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-progress="88"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-skill="OpenAI">
+                                    <div class="skill-icon">🤖</div>
+                                    <div class="skill-info">
+                                        <h4>OpenAI API</h4>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-progress="90"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-skill="Computer Vision">
+                                    <div class="skill-icon">👁️</div>
+                                    <div class="skill-info">
+                                        <h4>Computer Vision</h4>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-progress="85"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h3 class="category-title">3D & Graphics</h3>
+                            <div class="skills-grid">
+                                <div class="skill-item" data-skill="Three.js">
+                                    <div class="skill-icon">🎯</div>
+                                    <div class="skill-info">
+                                        <h4>Three.js</h4>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-progress="96"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-skill="Blender">
+                                    <div class="skill-icon">🎨</div>
+                                    <div class="skill-info">
+                                        <h4>Blender & 3D Modeling</h4>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-progress="82"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-skill="Shaders">
+                                    <div class="skill-icon">✨</div>
+                                    <div class="skill-info">
+                                        <h4>GLSL Shaders</h4>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-progress="89"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="blog-section" aria-label="Blog section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Insights & Innovation</h2>
+                    <p class="section-subtitle">Exploring the cutting edge of web development and technology</p>
+                </div>
+                
+                <div id="blog-container" class="blog-grid">
+                    <div class="loading-spinner">
+                        <div class="spinner"></div>
+                        <p>Loading revolutionary insights...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section" aria-label="Contact section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Start Your Revolution</h2>
+                    <p class="section-subtitle">Ready to create something extraordinary? Let's build the future together</p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-intro">
+                            <h3>Transform Your Vision Into Reality</h3>
+                            <p>Whether you're looking to create an immersive 3D experience, integrate AI into your application, or build the next revolutionary web platform, I'm here to make it happen.</p>
+                        </div>
+                        
+                        <div class="contact-methods">
+                            <a href="mailto:hello@goluxomgmt.com" class="contact-method">
+                                <div class="method-icon">📧</div>
+                                <div class="method-content">
+                                    <h4>Email</h4>
+                                    <p>hello@goluxomgmt.com</p>
+                                </div>
+                            </a>
+                            <a href="tel:+1234567890" class="contact-method">
+                                <div class="method-icon">📞</div>
+                                <div class="method-content">
+                                    <h4>Phone</h4>
+                                    <p>+1 (234) 567-890</p>
+                                </div>
+                            </a>
+                            <a href="https://calendly.com/goluxo" class="contact-method" target="_blank" rel="noopener">
+                                <div class="method-icon">📅</div>
+                                <div class="method-content">
+                                    <h4>Schedule Call</h4>
+                                    <p>Book a consultation</p>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="https://github.com/goluxo" aria-label="GitHub" target="_blank" rel="noopener">
+                                <span class="social-icon">🐙</span>
+                            </a>
+                            <a href="https://linkedin.com/in/goluxo" aria-label="LinkedIn" target="_blank" rel="noopener">
+                                <span class="social-icon">💼</span>
+                            </a>
+                            <a href="https://twitter.com/goluxo" aria-label="Twitter" target="_blank" rel="noopener">
+                                <span class="social-icon">🐦</span>
+                            </a>
+                            <a href="https://dribbble.com/goluxo" aria-label="Dribbble" target="_blank" rel="noopener">
+                                <span class="social-icon">🏀</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <form id="contact-form" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" id="name" name="name" class="form-input" required aria-describedby="name-error">
+                                <div id="name-error" class="error-message" role="alert"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" class="form-input" required aria-describedby="email-error">
+                                <div id="email-error" class="error-message" role="alert"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="project-type" class="form-label">Project Type</label>
+                                <select id="project-type" name="projectType" class="form-select" required>
+                                    <option value="">Select project type</option>
+                                    <option value="webgl">WebGL/3D Experience</option>
+                                    <option value="ai">AI/ML Integration</option>
+                                    <option value="interactive">Interactive Website</option>
+                                    <option value="ecommerce">E-commerce Platform</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="budget" class="form-label">Budget Range</label>
+                                <select id="budget" name="budget" class="form-select" required>
+                                    <option value="">Select budget range</option>
+                                    <option value="5k-10k">$5,000 - $10,000</option>
+                                    <option value="10k-25k">$10,000 - $25,000</option>
+                                    <option value="25k-50k">$25,000 - $50,000</option>
+                                    <option value="50k+">$50,000+</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Project Details</label>
+                                <textarea id="message" name="message" class="form-textarea" rows="5" required aria-describedby="message-error" placeholder="Tell me about your revolutionary project..."></textarea>
+                                <div id="message-error" class="error-message" role="alert"></div>
+                            </div>
+                            
+                            <button type="submit" class="submit-button" id="submit-btn">
+                                <span class="button-text">Launch Project</span>
+                                <span class="button-loading" style="display: none;">
+                                    <div class="loading-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </span>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer role="contentinfo">
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>GoLuxo</h3>
-                <p>Crafting extraordinary digital experiences with innovation and elegance.</p>
+                <div class="footer-brand">
+                    <h3>GoLuxo 2.0</h3>
+                    <p>Revolutionizing digital experiences with cutting-edge web technologies, AI, and immersive 3D graphics.</p>
+                </div>
             </div>
+            
+            <div class="footer-section">
+                <h4>Technologies</h4>
+                <div class="footer-links">
+                    <a href="#skills">WebGL & Three.js</a>
+                    <a href="#skills">AI & Machine Learning</a>
+                    <a href="#skills">3D Graphics</a>
+                    <a href="#skills">Interactive Design</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Services</h4>
+                <div class="footer-links">
+                    <a href="#projects">Custom Development</a>
+                    <a href="#projects">3D Web Experiences</a>
+                    <a href="#projects">AI Integration</a>
+                    <a href="#projects">Performance Optimization</a>
+                </div>
+            </div>
+            
             <div class="footer-section">
                 <h4>Connect</h4>
-                <div class="social-links">
-                    <a href="https://github.com/goluxo" aria-label="GitHub" target="_blank" rel="noopener">GitHub</a>
-                    <a href="https://linkedin.com/in/goluxo" aria-label="LinkedIn" target="_blank" rel="noopener">LinkedIn</a>
-                    <a href="https://twitter.com/goluxo" aria-label="Twitter" target="_blank" rel="noopener">Twitter</a>
+                <div class="footer-links">
+                    <a href="mailto:hello@goluxomgmt.com">Email</a>
+                    <a href="https://calendly.com/goluxo">Schedule Call</a>
+                    <a href="https://github.com/goluxo">GitHub</a>
+                    <a href="https://linkedin.com/in/goluxo">LinkedIn</a>
                 </div>
             </div>
         </div>
+        
         <div class="footer-bottom">
-            <p>&copy; 2025 GoLuxo. All rights reserved.</p>
+            <div class="footer-info">
+                <p>&copy; 2025 GoLuxo 2.0. All rights reserved.</p>
+                <p>Built with revolutionary technologies and ❤️</p>
+            </div>
+            <div class="footer-stats">
+                <span class="stat">🚀 99.9% Uptime</span>
+                <span class="stat">⚡ < 1s Load Time</span>
+                <span class="stat">🎯 100% Satisfaction</span>
+            </div>
         </div>
     </footer>
 
-    <!-- Toast Notification -->
-    <div id="toast" class="toast" role="alert" aria-live="polite"></div>
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
 
+    <!-- Modal -->
+    <div id="modal" class="modal" aria-hidden="true">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">×</button>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
