@@ -1,34 +1,52 @@
 {
     "posts": [
         {
-            "title": "1",
-            "date": "2025-07-01",
-            "image": "https://images.unsplash.com/photo-1516321310763-383e6f236bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
-            "content": "Welcome to GoLuxo! This is my first blog post, where I share my passion for creating luxurious digital experiences. Stay tuned for more."
+            "title": "The Future of Web Development: What's Next in 2025",
+            "date": "2025-01-15",
+            "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+            "content": "As we move into 2025, web development continues to evolve at a rapid pace. From AI-powered development tools to WebAssembly and the growing importance of performance optimization, let's explore what's shaping the future of our industry.",
+            "readTime": "5 min read",
+            "category": "Technology Trends"
         },
         {
-            "title": "Mastering Web Animations",
-            "date": "2025-07-15",
-            "image": "https://images.unsplash.com/photo-1461749288671-6f183fb77e03?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
-            "content": "Animations bring websites to life. In this post, I explore advanced CSS and JavaScript techniques to create stunning effects."
+            "title": "Mastering CSS Grid: A Complete Guide to Modern Layouts",
+            "date": "2025-01-10",
+            "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+            "content": "CSS Grid has revolutionized how we create layouts on the web. In this comprehensive guide, I'll walk you through advanced techniques, best practices, and real-world examples to help you master this powerful layout system.",
+            "readTime": "8 min read",
+            "category": "CSS"
         },
         {
-            "title": "Working on new pizza stuff....",
-            "date": "2025-08-01",
-            "image": "https://ibb.co/Dd2XPcC",
-            "content": "Let's see what we can do with this !"
+            "title": "Building Performant React Applications: Optimization Strategies",
+            "date": "2025-01-05",
+            "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+            "content": "Performance is crucial for user experience. Learn how to optimize your React applications with code splitting, lazy loading, memoization, and other advanced techniques that will make your apps lightning fast.",
+            "readTime": "10 min read",
+            "category": "React"
         },
         {
-            "title": "3",
-            "date": "2025-08-01",
-            "image": "https://ibb.co/Dd2XPcC",
-            "content": "Let's see what we can do with this !"
+            "title": "The Art of Micro-interactions: Enhancing User Experience",
+            "date": "2024-12-28",
+            "image": "https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+            "content": "Micro-interactions are the subtle animations and feedback that make digital experiences feel alive and responsive. Discover how to implement these small but powerful details that significantly improve user engagement.",
+            "readTime": "6 min read",
+            "category": "UX Design"
         },
         {
-            "title": "10",
-            "date": "2025-09-01",
-            "image": "https://ibb.co/Dd2XPcC",
-            "content": "UHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
+            "title": "JavaScript Performance Optimization: From Beginner to Expert",
+            "date": "2024-12-20",
+            "image": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+            "content": "JavaScript performance can make or break your web application. This deep dive covers everything from basic optimization techniques to advanced profiling and debugging strategies used by industry experts.",
+            "readTime": "12 min read",
+            "category": "JavaScript"
+        },
+        {
+            "title": "Accessibility in Web Development: Building for Everyone",
+            "date": "2024-12-15",
+            "image": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+            "content": "Web accessibility isn't just a legal requirement—it's a moral imperative. Learn how to build websites that work for everyone, including users with disabilities, and discover tools and techniques for testing accessibility.",
+            "readTime": "7 min read",
+            "category": "Accessibility"
         }
     ]
 }
