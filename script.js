@@ -694,8 +694,8 @@ class ContentLoader {
             <div class="error-message">
                 <p>${message}</p>
                 <button onclick="location.reload()" class="cta-button secondary">Retry</button>
-            </div>
-        `;
+                    </div>
+                `;
     }
 }
 
