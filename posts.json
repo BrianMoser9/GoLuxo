@@ -11,6 +11,12 @@
             "date": "2025-07-15",
             "image": "https://images.unsplash.com/photo-1461749288671-6f183fb77e03?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
             "content": "Animations bring websites to life. In this post, I explore advanced CSS and JavaScript techniques to create stunning effects."
+        },
+        {
+            "title": "Working on new pizza stuff....",
+            "date": "2025-08-01",
+            "image": "https://ibb.co/Dd2XPcC",
+            "content": "Let's see what we can do with this !"
         }
     ]
 }
