@@ -1,6 +1,7 @@
 {
     "posts": [
         {
+<<<<<<< HEAD
             "title": "The Future of Web Development: WebGL, AI, and Beyond 2025",
             "date": "2025-01-15",
 <<<<<<< HEAD
@@ -25,24 +26,33 @@
             "content": "CSS Grid has revolutionized how we create layouts on the web. In this comprehensive guide, I'll walk you through advanced techniques, best practices, and real-world examples to help you master this powerful layout system.",
             "readTime": "8 min read",
             "category": "CSS"
+=======
+            "title": "1",
+            "date": "2025-07-01",
+            "image": "https://images.unsplash.com/photo-1516321310763-383e6f236bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+            "content": "Welcome to GoLuxo! This is my first blog post, where I share my passion for creating luxurious digital experiences. Stay tuned for more."
         },
         {
-            "title": "Building Performant React Applications: Optimization Strategies",
-            "date": "2025-01-05",
-            "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-            "content": "Performance is crucial for user experience. Learn how to optimize your React applications with code splitting, lazy loading, memoization, and other advanced techniques that will make your apps lightning fast.",
-            "readTime": "10 min read",
-            "category": "React"
+            "title": "Mastering Web Animations",
+            "date": "2025-07-15",
+            "image": "https://images.unsplash.com/photo-1461749288671-6f183fb77e03?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+            "content": "Animations bring websites to life. In this post, I explore advanced CSS and JavaScript techniques to create stunning effects."
+>>>>>>> parent of 9a0b8a2 (bigupdate)
         },
         {
-            "title": "The Art of Micro-interactions: Enhancing User Experience",
-            "date": "2024-12-28",
-            "image": "https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-            "content": "Micro-interactions are the subtle animations and feedback that make digital experiences feel alive and responsive. Discover how to implement these small but powerful details that significantly improve user engagement.",
-            "readTime": "6 min read",
-            "category": "UX Design"
+            "title": "Working on new pizza stuff....",
+            "date": "2025-08-01",
+            "image": "https://ibb.co/Dd2XPcC",
+            "content": "Let's see what we can do with this !"
         },
         {
+            "title": "3",
+            "date": "2025-08-01",
+            "image": "https://ibb.co/Dd2XPcC",
+            "content": "Let's see what we can do with this !"
+        },
+        {
+<<<<<<< HEAD
             "title": "JavaScript Performance Optimization: From Beginner to Expert",
             "date": "2024-12-20",
             "image": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
@@ -121,6 +131,12 @@
             "readTime": "7 min read",
             "category": "Accessibility"
 >>>>>>> parent of 9093519 (8766)
+=======
+            "title": "10",
+            "date": "2025-09-01",
+            "image": "https://ibb.co/Dd2XPcC",
+            "content": "UHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
+>>>>>>> parent of 9a0b8a2 (bigupdate)
         }
     ]
 }
