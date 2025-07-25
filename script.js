@@ -251,10 +251,14 @@ class ContentLoader {
             `<span class="tech-tag">${tech}</span>`
         ).join('') : '';
         
+        const fallbackImage = 'https://images.unsplash.com/photo-1461749288671-6f183fb77e03?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80';
+        
         card.innerHTML = `
-            <img src="${project.image || 'https://images.unsplash.com/photo-1516321310763-383e6f236bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'}" 
+            <img src="${project.image || fallbackImage}" 
                  alt="${project.title}" 
-                 loading="lazy">
+                 loading="lazy"
+                 onerror="this.src='${fallbackImage}'; this.onerror=null;"
+                 onload="this.classList.add('loaded');">
             <div class="card-content">
                 <h3>${project.title}</h3>
                 <p>${project.description}</p>
@@ -274,10 +278,14 @@ class ContentLoader {
         card.className = 'card fade-in';
         card.style.animationDelay = `${index * 0.2}s`;
         
+        const fallbackImage = 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80';
+        
         card.innerHTML = `
-            <img src="${post.image || 'https://images.unsplash.com/photo-1516321310763-383e6f236bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'}" 
+            <img src="${post.image || fallbackImage}" 
                  alt="${post.title}" 
-                 loading="lazy">
+                 loading="lazy"
+                 onerror="this.src='${fallbackImage}'; this.onerror=null;"
+                 onload="this.classList.add('loaded');">
             <div class="card-content">
                 <div class="card-meta">
                     <span class="category">${post.category || 'General'}</span>
