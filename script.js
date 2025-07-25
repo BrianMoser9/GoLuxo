@@ -644,6 +644,7 @@ class ContentLoader {
         ).join('') : '';
         
         card.innerHTML = `
+<<<<<<< HEAD
             <div class="card-image">
                 <img src="${project.image}" alt="${project.title}" loading="lazy">
                 <div class="card-overlay">
@@ -651,6 +652,18 @@ class ContentLoader {
                         ${project.downloadLink ? `<a href="${project.downloadLink}" target="_blank" rel="noopener" class="card-action">View Code</a>` : ''}
                         ${project.demoLink ? `<a href="${project.demoLink}" target="_blank" rel="noopener" class="card-action">Live Demo</a>` : ''}
                     </div>
+=======
+            <img src="${project.image || 'https://images.unsplash.com/photo-1516321310763-383e6f236bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'}" 
+                 alt="${project.title}" 
+                 loading="lazy">
+            <div class="card-content">
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                ${technologies ? `<div class="tech-stack">${technologies}</div>` : ''}
+                <div class="card-actions">
+                    ${project.downloadLink ? `<a href="${project.downloadLink}" target="_blank" rel="noopener">View Code</a>` : ''}
+                    ${project.demoLink ? `<a href="${project.demoLink}" target="_blank" rel="noopener">Live Demo</a>` : ''}
+>>>>>>> parent of 9093519 (8766)
                 </div>
             </div>
             <div class="card-content">
@@ -665,11 +678,22 @@ class ContentLoader {
 
     createBlogCard(post, index) {
         const card = document.createElement('div');
+<<<<<<< HEAD
         card.className = 'card blog-card';
         
         card.innerHTML = `
             <div class="card-image">
                 <img src="${post.image}" alt="${post.title}" loading="lazy">
+=======
+        card.className = 'card fade-in';
+        card.style.animationDelay = `${index * 0.2}s`;
+        
+        card.innerHTML = `
+            <img src="${post.image || 'https://images.unsplash.com/photo-1516321310763-383e6f236bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'}" 
+                 alt="${post.title}" 
+                 loading="lazy">
+            <div class="card-content">
+>>>>>>> parent of 9093519 (8766)
                 <div class="card-meta">
                     <span class="category">${post.category || 'General'}</span>
                     <span class="read-time">${post.readTime || '3 min read'}</span>
