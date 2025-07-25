@@ -5,10 +5,13 @@
             "title": "The Future of Web Development: WebGL, AI, and Beyond 2025",
             "date": "2025-01-15",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
             "content": "As we enter 2025, web development is undergoing a revolutionary transformation. WebGL is becoming the standard for immersive experiences, AI is powering intelligent interfaces, and quantum computing is on the horizon. This is the future of the web.",
             "readTime": "8 min read",
 =======
+=======
+>>>>>>> parent of 9093519 (8766)
             "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
             "content": "As we move into 2025, web development continues to evolve at a rapid pace. From AI-powered development tools to WebAssembly and the growing importance of performance optimization, let's explore what's shaping the future of our industry.",
             "readTime": "5 min read",
@@ -19,9 +22,12 @@
             "title": "Building Real-Time 3D Experiences with WebGL and Three.js",
             "date": "2025-01-10",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
             "content": "Learn how to create stunning real-time 3D experiences using WebGL and Three.js. From particle systems to complex geometries, discover the techniques that power the next generation of web applications.",
 =======
+=======
+>>>>>>> parent of 9093519 (8766)
             "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
             "content": "CSS Grid has revolutionized how we create layouts on the web. In this comprehensive guide, I'll walk you through advanced techniques, best practices, and real-world examples to help you master this powerful layout system.",
             "readTime": "8 min read",
@@ -33,6 +39,7 @@
             "content": "Welcome to GoLuxo! This is my first blog post, where I share my passion for creating luxurious digital experiences. Stay tuned for more."
         },
         {
+<<<<<<< HEAD
             "title": "Mastering Web Animations",
             "date": "2025-07-15",
             "image": "https://images.unsplash.com/photo-1461749288671-6f183fb77e03?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
@@ -44,6 +51,22 @@
             "date": "2025-08-01",
             "image": "https://ibb.co/Dd2XPcC",
             "content": "Let's see what we can do with this !"
+=======
+            "title": "Building Performant React Applications: Optimization Strategies",
+            "date": "2025-01-05",
+            "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+            "content": "Performance is crucial for user experience. Learn how to optimize your React applications with code splitting, lazy loading, memoization, and other advanced techniques that will make your apps lightning fast.",
+            "readTime": "10 min read",
+            "category": "React"
+        },
+        {
+            "title": "The Art of Micro-interactions: Enhancing User Experience",
+            "date": "2024-12-28",
+            "image": "https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+            "content": "Micro-interactions are the subtle animations and feedback that make digital experiences feel alive and responsive. Discover how to implement these small but powerful details that significantly improve user engagement.",
+            "readTime": "6 min read",
+            "category": "UX Design"
+>>>>>>> parent of 9093519 (8766)
         },
         {
             "title": "3",
@@ -89,6 +112,7 @@
             "title": "Building the Metaverse: WebXR and 3D Social Platforms",
             "date": "2024-12-15",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "image": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
             "content": "The metaverse is here, and it's built on web technologies. Learn how to create immersive 3D social platforms using WebXR, real-time communication, and spatial computing.",
             "readTime": "11 min read",
@@ -126,6 +150,8 @@
             "readTime": "12 min read",
             "category": "Design Systems"
 =======
+=======
+>>>>>>> parent of 9093519 (8766)
             "image": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
             "content": "Web accessibility isn't just a legal requirement—it's a moral imperative. Learn how to build websites that work for everyone, including users with disabilities, and discover tools and techniques for testing accessibility.",
             "readTime": "7 min read",

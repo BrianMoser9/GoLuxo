@@ -708,6 +708,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         card.innerHTML = `
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div class="card-image">
                 <img src="${project.image}" alt="${project.title}" loading="lazy">
                 <div class="card-overlay">
@@ -716,6 +717,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         ${project.demoLink ? `<a href="${project.demoLink}" target="_blank" rel="noopener" class="card-action">Live Demo</a>` : ''}
                     </div>
 =======
+=======
+>>>>>>> parent of 9093519 (8766)
             <img src="${project.image || 'https://images.unsplash.com/photo-1516321310763-383e6f236bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'}" 
                  alt="${project.title}" 
                  loading="lazy">
