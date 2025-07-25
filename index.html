@@ -42,9 +42,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GoLuxo - Personal Portfolio</title>
+    <title>GoLuxo - Creative Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -61,35 +61,31 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1 class="fade-in">Welcome to GoLuxo</h1>
-            <p class="fade-in">Crafting Vibrant Digital Masterpieces</p>
-            <a href="#projects" class="cta-button">Explore My Creations</a>
+            <h1 class="fade-in">GoLuxo</h1>
+            <p class="fade-in">Unleashing Creativity Through Code</p>
+            <a href="#projects" class="cta-button">Discover My Work</a>
         </div>
-        <div class="hero-bg">
-            <canvas id="particle-canvas"></canvas>
-        </div>
+        <canvas id="hero-canvas" class="hero-canvas"></canvas>
     </section>
 
     <section id="about" class="section">
         <h2 class="section-title">About GoLuxo</h2>
         <div class="about-content">
-            <img src="https://images.unsplash.com/photo-1516321310763-383e6f236bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="GoLuxo Photo" class="about-photo slide-in">
-            <div class="about-text slide-in">
-                <p>GoLuxo is the vision of a creator passionate about blending art and technology. I specialize in building dynamic, elegant, and high-performance web experiences that captivate users.</p>
-                <p>Dive into my projects, explore my blog, or connect to create something extraordinary together.</p>
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2b6e3c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="GoLuxo Photo" class="about-photo zoom-in">
+            <div class="about-text zoom-in">
+                <p>GoLuxo is a celebration of creativity and innovation. I'm a developer and designer dedicated to crafting immersive, high-performance web experiences that inspire and engage.</p>
+                <p>Explore my projects, dive into my blog, or connect to bring your ideas to life.</p>
             </div>
         </div>
     </section>
 
     <section id="projects" class="section">
         <h2 class="section-title">My Projects</h2>
-        <button id="refresh-projects" class="cta-button">Refresh Projects</button>
         <div id="projects-container" class="projects-grid"></div>
     </section>
 
     <section id="blog" class="section">
         <h2 class="section-title">GoLuxo Blog</h2>
-        <button id="refresh-posts" class="cta-button">Refresh Blog</button>
         <div id="blog-container" class="blog-grid"></div>
     </section>
 
