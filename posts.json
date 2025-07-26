@@ -5,5 +5,12 @@
     "category": "Journey",
     "description": "My first steps into coding and why GoLuxo even exists.",
     "image": "images/post-journey.png"
+  },
+  {
+    "title": "Game Dev with Godot",
+    "date": "2025-07-21",
+    "category": "Game Dev",
+    "description": "Exploring the capabilities of Godot for indie game development.",
+    "image": "images/post-godot.png"
   }
 ]
