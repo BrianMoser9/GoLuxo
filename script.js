@@ -36,29 +36,35 @@ themeToggle.addEventListener('click', () => {
 // Initialize theme on load
 setTheme(localStorage.getItem('theme') || 'dark');
 
-// Helper to create a card HTML string
+// Helper to create a card HTML string with dynamic buttons
 function createCard(item) {
+  let buttonsHTML = '';
+
+  if (Array.isArray(item.buttons)) {
+    buttonsHTML = `<div class="buttons">` + item.buttons
+      .map(btn => `<a href="${btn.link}" target="_blank" class="card-btn">${btn.name}</a>`)
+      .join('') + `</div>`;
+  }
+
   return `
     <div class="card" data-category="${item.category}" tabindex="0">
       <img src="${item.image}" alt="${item.title}" />
       <h3>${item.title}</h3>
       <small>${item.date} • ${item.category}</small>
       <p>${item.description}</p>
+      ${buttonsHTML}
     </div>
   `;
 }
 
 // Render cards with filtering logic & cache busting
 async function loadCards(jsonUrl, containerId, filterId) {
-  // Add cache-buster query param
-  const url = jsonUrl + '?t=' + new Date().getTime();
-
+  const url = jsonUrl + '?t=' + new Date().getTime(); // bust cache
   const res = await fetch(url);
   const data = await res.json();
   const container = document.getElementById(containerId);
   const filterContainer = document.getElementById(filterId);
 
-  // Unique categories + "All"
   const categories = ['All', ...new Set(data.map(item => item.category))];
 
   // Render filter buttons
@@ -66,14 +72,12 @@ async function loadCards(jsonUrl, containerId, filterId) {
     .map(cat => `<button class="filter-btn" data-cat="${cat}">${cat}</button>`)
     .join('');
 
-  // Function to render cards by category
   function renderCards(cat) {
     const filtered = cat === 'All' ? data : data.filter(d => d.category === cat);
     container.innerHTML = filtered.map(createCard).join('');
     addCardListeners();
   }
 
-  // Add filter click handlers
   filterContainer.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       filterContainer.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -82,7 +86,6 @@ async function loadCards(jsonUrl, containerId, filterId) {
     });
   });
 
-  // Activate first filter by default
   filterContainer.querySelector('.filter-btn').classList.add('active');
   renderCards('All');
 }
@@ -92,20 +95,17 @@ const modal = document.getElementById('modal');
 const modalBody = document.getElementById('modal-body');
 const closeModalBtn = document.getElementById('closeModal');
 
-// Show modal with full content
 function showModal(content) {
   modalBody.innerHTML = content;
   modal.style.display = 'flex';
-  document.body.style.overflow = 'hidden'; // prevent background scroll
+  document.body.style.overflow = 'hidden';
 }
 
-// Hide modal
 function hideModal() {
   modal.style.display = 'none';
   document.body.style.overflow = '';
 }
 
-// Close modal events
 closeModalBtn.addEventListener('click', hideModal);
 modal.addEventListener('click', e => {
   if (e.target === modal) hideModal();
@@ -128,14 +128,13 @@ function addCardListeners() {
       `;
       showModal(content);
     };
-    // Keyboard accessibility: open modal on Enter key
     card.addEventListener('keydown', e => {
       if (e.key === 'Enter') card.click();
     });
   });
 }
 
-// Initialize everything on DOM ready
+// Init all
 window.addEventListener('DOMContentLoaded', () => {
   loadCards('projects.json', 'projects-container', 'project-filters');
   loadCards('posts.json', 'posts-container', 'post-filters');

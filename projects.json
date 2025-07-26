@@ -1,9 +1,13 @@
 [
   {
-    "title": "Industrial Explorer",
-    "date": "2025-07-22",
-    "category": "Game Dev",
-    "description": "A gritty 3D exploration game made in Godot using the Industrial City Pack.",
-    "image": "images/project-industrial.png"
+    "title": "My Cool App",
+    "date": "2025-07-26",
+    "category": "Web",
+    "description": "Some awesome thing I built.",
+    "image": "images/app.png",
+    "buttons": [
+      { "name": "GitHub", "link": "https://github.com/myapp" },
+      { "name": "Live Site", "link": "https://myapp.live" }
+    ]
   }
 ]
