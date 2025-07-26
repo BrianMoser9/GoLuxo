@@ -10,5 +10,17 @@
       { "name": "Live Site", "link": "https://myapp.live" },
       { "name": "Download", "link": "https://myapp.download" }
     ]
+  },
+  {
+    "title": "My Cool Game",
+    "date": "2025-07-27",
+    "category": "Game",
+    "description": "An exciting game I developed.",
+    "image": "images/game.png",
+    "buttons": [
+      { "name": "GitHub", "link": "https://github.com/mygame" },
+      { "name": "Live Site", "link": "https://mygame.live" },
+      { "name": "Download", "link": "https://mygame.download" }
+    ]
   }
 ]
