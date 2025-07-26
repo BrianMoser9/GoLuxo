@@ -1,14 +1,21 @@
 [
   {
-    "title": "My Cool App",
+    "title": "10 Sample websites ",
     "date": "2025-07-26",
     "category": "Web",
-    "description": "Some awesome thing I built.",
-    "image": "images/app.png",
+    "description": "If you are looking for a website, GoLuxo has you covered. Here are 10 sample websites I made, for you to see and know the real quality of our work. Contact us at the section below to get in touch with us.",
+    "image": "https://imgur.com/tdMNEGZ.png",
     "buttons": [
-      { "name": "GitHub", "link": "https://github.com/myapp" },
-      { "name": "Live Site", "link": "https://myapp.live" },
-      { "name": "Download", "link": "https://myapp.download" }
+      { "name": "Pizza Place", "link": "https://github.com/myapp" },
+      { "name": "Photographer", "link": "https://myapp.live" },
+      { "name": "Pet Grooming", "link": "https://myapp.download" },
+      { "name": "Nail Salon", "link": "https://myapp.restaurant" },
+      { "name": "Landscaping Services", "link": "https://myapp.plumber" },
+      { "name": "Gym", "link": "https://myapp.electrician" },
+      { "name": "Coffee Shop", "link": "https://myapp.landscaper" },
+      { "name": "Boutique Clothing", "link": "https://myapp.fitness" },
+      { "name": "Barber Shop", "link": "https://myapp.consultant" },
+      { "name": "Auto Repair", "link": "https://myapp.realestate" }
     ]
   },
   {
