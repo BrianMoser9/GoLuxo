@@ -7,7 +7,8 @@
     "image": "images/app.png",
     "buttons": [
       { "name": "GitHub", "link": "https://github.com/myapp" },
-      { "name": "Live Site", "link": "https://myapp.live" }
+      { "name": "Live Site", "link": "https://myapp.live" },
+      { "name": "Download", "link": "https://myapp.download" }
     ]
   }
 ]
