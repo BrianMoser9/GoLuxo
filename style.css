@@ -43,18 +43,22 @@ body::before {
   z-index: 1;
 }
 
-/* Section styling */
 .section {
+  margin-top: 3rem; /* space from previous section */
+  margin-bottom: 3rem; /* space below as well, optional */
+  /* keep your existing styles */
   padding: 6rem 0;
   max-width: 900px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.15); /* translucent white */
+  background-color: rgba(255, 255, 255, 0.15);
   border-radius: var(--radius);
   backdrop-filter: blur(15px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   color: var(--text-light);
 }
+
 
 /* Typography */
 h1, h2, h3, h4 {
