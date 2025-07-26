@@ -33,14 +33,14 @@ themeToggle.addEventListener('click', () => {
   setTheme(currentTheme === 'dark' ? 'light' : 'dark');
 });
 
-// Initialize theme
+// Initialize theme on load
 setTheme(localStorage.getItem('theme') || 'dark');
 
-// Helper: Create card HTML
+// Helper to create a card HTML string
 function createCard(item) {
   return `
     <div class="card" data-category="${item.category}" tabindex="0">
-      <img src="${item.image}" alt="${item.title}">
+      <img src="${item.image}" alt="${item.title}" />
       <h3>${item.title}</h3>
       <small>${item.date} • ${item.category}</small>
       <p>${item.description}</p>
@@ -48,20 +48,20 @@ function createCard(item) {
   `;
 }
 
-// Render cards into container
-async function loadCards(url, containerId, filterId) {
-  const res = await fetch(url);
+// Render cards with filtering logic
+async function loadCards(jsonUrl, containerId, filterId) {
+  const res = await fetch(jsonUrl);
   const data = await res.json();
   const container = document.getElementById(containerId);
   const filterContainer = document.getElementById(filterId);
 
-  // Get unique categories for filters
+  // Unique categories + "All"
   const categories = ['All', ...new Set(data.map(item => item.category))];
 
   // Render filter buttons
-  filterContainer.innerHTML = categories.map(cat =>
-    `<button class="filter-btn" data-cat="${cat}">${cat}</button>`
-  ).join('');
+  filterContainer.innerHTML = categories
+    .map(cat => `<button class="filter-btn" data-cat="${cat}">${cat}</button>`)
+    .join('');
 
   // Function to render cards by category
   function renderCards(cat) {
@@ -70,10 +70,7 @@ async function loadCards(url, containerId, filterId) {
     addCardListeners();
   }
 
-  // Initial render all
-  renderCards('All');
-
-  // Add filter button listeners
+  // Add filter click handlers
   filterContainer.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       filterContainer.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -82,20 +79,21 @@ async function loadCards(url, containerId, filterId) {
     });
   });
 
-  // Set first filter active
+  // Activate first filter by default
   filterContainer.querySelector('.filter-btn').classList.add('active');
+  renderCards('All');
 }
 
-// Modal logic
+// Modal elements
 const modal = document.getElementById('modal');
 const modalBody = document.getElementById('modal-body');
-const closeModalBtn = document.getElementById('closeModal') || document.querySelector('.close-modal');
+const closeModalBtn = document.getElementById('closeModal');
 
-// Show modal with content
+// Show modal with full content
 function showModal(content) {
   modalBody.innerHTML = content;
   modal.style.display = 'flex';
-  document.body.style.overflow = 'hidden';
+  document.body.style.overflow = 'hidden'; // prevent background scroll
 }
 
 // Hide modal
@@ -104,13 +102,13 @@ function hideModal() {
   document.body.style.overflow = '';
 }
 
-// Add event listener to close modal
-closeModalBtn?.addEventListener('click', hideModal);
+// Close modal events
+closeModalBtn.addEventListener('click', hideModal);
 modal.addEventListener('click', e => {
   if (e.target === modal) hideModal();
 });
 
-// Add click & key listener to cards for modal
+// Add listeners to cards to open modal
 function addCardListeners() {
   document.querySelectorAll('.card').forEach(card => {
     card.onclick = () => {
@@ -122,20 +120,19 @@ function addCardListeners() {
       const content = `
         <h2>${title}</h2>
         <small>${date}</small>
-        <img src="${imgSrc}" alt="${title}" style="width:100%; margin: 1rem 0; border-radius: 10px;" />
+        <img src="${imgSrc}" alt="${title}" />
         <p>${desc}</p>
       `;
       showModal(content);
     };
-
-    // Accessibility: open modal on Enter key
+    // Keyboard accessibility: open modal on Enter key
     card.addEventListener('keydown', e => {
       if (e.key === 'Enter') card.click();
     });
   });
 }
 
-// Init on DOMContentLoaded
+// Initialize everything on DOM ready
 window.addEventListener('DOMContentLoaded', () => {
   loadCards('projects.json', 'projects-container', 'project-filters');
   loadCards('posts.json', 'posts-container', 'post-filters');
