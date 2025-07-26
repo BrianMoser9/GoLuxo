@@ -12,5 +12,12 @@
     "category": "Game Dev",
     "description": "Exploring the capabilities of Godot for indie game development.",
     "image": "images/post-godot.png"
+  },
+  {
+    "title": "Building with Unity",
+    "date": "2025-07-23",
+    "category": "GOOBERS!",
+    "description": "A deep dive into Unity's features and how it can enhance game development.",
+    "image": "images/post-unity.png"
   }
 ]
