@@ -48,9 +48,12 @@ function createCard(item) {
   `;
 }
 
-// Render cards with filtering logic
+// Render cards with filtering logic & cache busting
 async function loadCards(jsonUrl, containerId, filterId) {
-  const res = await fetch(jsonUrl);
+  // Add cache-buster query param
+  const url = jsonUrl + '?t=' + new Date().getTime();
+
+  const res = await fetch(url);
   const data = await res.json();
   const container = document.getElementById(containerId);
   const filterContainer = document.getElementById(filterId);
