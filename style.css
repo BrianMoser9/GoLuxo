@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap');
 
 :root {
-  --bg-dark: #0f0f1a;
-  --bg-light: #f0f0f5;
-  --text-dark: #1e1e2e;
-  --text-light: #f5f5f5;
-  --accent: #a259ff;
-  --glass: rgba(255, 255, 255, 0.05);
-  --blur: blur(10px);
-  --shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  --bg-dark: #0a0a1e; /* darker blue-black base */
+  --bg-light: #e9e6f7; /* very light for light mode */
+  --text-dark: #12121e; /* dark text for light mode */
+  --text-light: #eaeaff; /* off-white with bluish tint */
+  --accent: #d07fff; /* bright neon purple-pink */
+  --glass: rgba(10, 10, 30, 0.4); /* darker glass for better contrast */
+  --blur: blur(12px);
+  --shadow: 0 5px 18px rgba(208, 127, 255, 0.5); /* subtle purple glow */
   --radius: 12px;
   --transition: 0.3s ease;
 }
@@ -29,11 +29,11 @@ body {
 
 /* Theme light override */
 body.light-mode {
-  --text-light: #0f0f1a;
-  background: linear-gradient(270deg, #f0f0f5, #dcd6f7, #c4b5fd, #aab3f5);
+  --text-light: #12121e;
+  background: linear-gradient(270deg, #f0f0f8, #dcd6f7, #c4b5fd, #aab3f5);
+  color: var(--text-dark);
   background-size: 800% 800%;
   animation: gradientShiftLight 25s ease infinite;
-  color: var(--text-light);
 }
 
 /* Gradient animations */
@@ -154,8 +154,8 @@ nav.nav {
 .nav-links li a:focus,
 .mobile-nav li a:focus {
   color: var(--accent);
+  background: rgba(208, 127, 255, 0.15);
   outline: none;
-  background: rgba(162, 89, 255, 0.15);
   cursor: pointer;
 }
 
@@ -235,7 +235,7 @@ nav.nav {
 
 .cta:hover,
 .cta:focus {
-  background: #8e44ff;
+  background: #bf69ff;
   outline: none;
   cursor: pointer;
 }
@@ -363,7 +363,7 @@ nav.nav {
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(15, 15, 26, 0.95);
+  background: rgba(10, 10, 30, 0.95);
   display: none;
   justify-content: center;
   align-items: center;
@@ -418,7 +418,7 @@ nav.nav {
 
 .close-modal:hover,
 .close-modal:focus {
-  color: #8e44ff;
+  color: #bf69ff;
   outline: none;
 }
 
@@ -466,7 +466,7 @@ form button {
 
 form button:hover,
 form button:focus {
-  background: #8e44ff;
+  background: #bf69ff;
   outline: none;
 }
 
