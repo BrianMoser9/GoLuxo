@@ -25,6 +25,20 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  z-index: 1;
+}
+
+/* Dark subtle pattern overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,0.04), transparent 40%),
+    radial-gradient(circle at 70% 70%, rgba(255,255,255,0.03), transparent 40%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* Theme light override */
@@ -56,7 +70,7 @@ body.light-mode {
 
 html {
   scroll-behavior: smooth;
-  font-size: 14px; /* scaled down from 16px */
+  font-size: 14px;
   height: 100%;
 }
 
@@ -66,38 +80,54 @@ body {
 
 /* Container */
 .container {
-  max-width: 900px; /* slightly narrower */
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 16px;
 }
 
 /* Section base */
 .section {
-  padding: 4rem 0; /* smaller vertical padding */
+  padding: 4rem 0;
   text-align: center;
   max-width: 900px;
   margin: 0 auto;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  animation-name: fadeUp;
+}
+
+/* Animate sections on scroll */
+.section.visible {
+  opacity: 1;
+  animation-name: fadeUp;
 }
 
 /* Typography */
-h1, h2, h3, h4 {
+h1, h2, h3, h4, .logo {
   font-weight: 800;
   margin-bottom: 0.8rem;
   color: var(--accent);
   line-height: 1.1;
+  background: linear-gradient(45deg, #d07fff, #a259ff, #bf69ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 h2 {
-  font-size: 2rem; /* smaller */
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.15rem; /* smaller */
+  font-size: 1.15rem;
 }
 
 p {
   font-weight: 300;
-  font-size: 0.9rem; /* smaller */
+  font-size: 0.88rem;
   opacity: 0.85;
   margin-bottom: 1.2rem;
 }
@@ -123,17 +153,17 @@ nav.nav {
 }
 
 .logo {
-  font-size: 1.4rem; /* smaller */
-  color: var(--accent);
+  font-size: 1.4rem;
   letter-spacing: 2px;
   user-select: none;
 }
 
+/* Nav links */
 .nav-links,
 .mobile-nav {
   list-style: none;
   display: flex;
-  gap: 1.5rem; /* tighter gap */
+  gap: 1.5rem;
   align-items: center;
 }
 
@@ -146,7 +176,31 @@ nav.nav {
   border-radius: 8px;
   transition: color 0.3s ease;
   user-select: none;
-  font-size: 0.9rem; /* smaller */
+  font-size: 0.9rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated underline on nav links */
+.nav-links li a::after,
+.mobile-nav li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease, left 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a:focus::after,
+.mobile-nav li a:hover::after,
+.mobile-nav li a:focus::after {
+  width: 100%;
+  left: 0;
 }
 
 .nav-links li a:hover,
@@ -189,6 +243,7 @@ nav.nav {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   width: 160px;
+  z-index: 10000;
 }
 
 .mobile-nav.show {
@@ -207,12 +262,20 @@ nav.nav {
   padding-left: 16px;
   padding-right: 16px;
   color: var(--accent);
+  perspective: 900px;
+  overflow: visible;
 }
 
 .hero h2 {
   font-size: 2.5rem;
   margin-bottom: 0.4rem;
   user-select: none;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.hero:hover h2 {
+  transform: translateZ(30px) rotateY(5deg);
 }
 
 .hero p {
@@ -231,6 +294,7 @@ nav.nav {
   text-decoration: none;
   transition: background 0.3s ease;
   user-select: none;
+  animation: pulseGlow 3s ease-in-out infinite;
 }
 
 .cta:hover,
@@ -238,6 +302,7 @@ nav.nav {
   background: #bf69ff;
   outline: none;
   cursor: pointer;
+  filter: brightness(1.15);
 }
 
 /* Tech stack */
@@ -290,6 +355,8 @@ nav.nav {
   background: var(--accent);
   color: white;
   outline: none;
+  filter: brightness(1.15);
+  animation: pulseGlow 3s ease-in-out infinite;
 }
 
 .filters button.active {
@@ -302,8 +369,9 @@ nav.nav {
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.6rem;
+  gap: 1.2rem;
   margin-top: 1rem;
+  perspective: 800px;
 }
 
 .card {
@@ -314,17 +382,21 @@ nav.nav {
   padding: 1.2rem;
   cursor: pointer;
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   outline: none;
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 
 .card:hover,
 .card:focus {
-  transform: scale(1.04);
-  box-shadow: 0 0 18px var(--accent);
+  transform: rotateX(8deg) rotateY(8deg) scale(1.05);
+  box-shadow:
+    0 12px 25px rgba(208, 127, 255, 0.7),
+    0 0 15px rgba(208, 127, 255, 0.5);
 }
 
 .card img {
@@ -340,7 +412,7 @@ nav.nav {
   color: var(--accent);
   margin-bottom: 0.3rem;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .card small {
@@ -462,12 +534,14 @@ form button {
   transition: background 0.3s ease;
   user-select: none;
   font-size: 1rem;
+  animation: pulseGlow 3s ease-in-out infinite;
 }
 
 form button:hover,
 form button:focus {
   background: #bf69ff;
   outline: none;
+  filter: brightness(1.15);
 }
 
 /* Preloader */
@@ -485,6 +559,28 @@ form button:focus {
   user-select: none;
   z-index: 100000;
   transition: opacity 0.5s ease;
+}
+
+/* Animations */
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 8px var(--accent);
+  }
+  50% {
+    box-shadow: 0 0 16px var(--accent);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive */
