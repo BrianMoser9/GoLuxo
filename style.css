@@ -1,65 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600;900&display=swap');
 
 :root {
-  --bg-image: url('https://i.imgur.com/bf7sFwy.jpeg'); /* Change to your preferred image or comment out for solid color */
-  --bg-light: #ffffffd6;
-  --bg-section: rgba(255, 255, 255, 0.5); /* semi-transparent white for cards/sections */
+  --bg-image: url('https://i.imgur.com/bf7sFwy.jpeg'); /* Your Imgur direct image */
   --text-dark: #1d1d1f;
-  --text-light: #6e6e73;
-  --accent: #0071e3; /* Apple blue */
+  --text-light: #e0e0e0;
+  --accent: #0071e3;
   --accent-light: #e5f1fc;
-  --shadow: rgba(0, 0, 0, 0.08);
   --radius: 12px;
   --transition: 0.3s ease;
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-
 /* Base */
 body {
   margin: 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: var(--bg-light);
-  color: var(--text-dark);
-  line-height: 1.5;
+  font-family: var(--font-main);
+  background: var(--bg-image) no-repeat center center fixed;
+  background-size: cover;
+  color: var(--text-light);
+  position: relative;
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Container */
+/* Dark overlay to make text pop */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Container and layout */
 .container {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 24px;
+  position: relative;
+  z-index: 1;
 }
 
-/* Section */
+/* Section styling */
 .section {
   padding: 6rem 0;
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
-  opacity: 0;
-  animation-fill-mode: forwards;
-  animation-duration: 0.8s;
-  animation-timing-function: ease-out;
-  animation-name: fadeUp;
-}
-
-/* Reveal on scroll */
-.section.visible {
-  opacity: 1;
-  animation-name: fadeUp;
+  background-color: rgba(255, 255, 255, 0.15); /* translucent white */
+  border-radius: var(--radius);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  color: var(--text-light);
 }
 
 /* Typography */
 h1, h2, h3, h4 {
   font-weight: 900;
-  color: var(--text-dark);
   margin-bottom: 0.5rem;
   letter-spacing: -0.02em;
   line-height: 1.1;
+  color: var(--text-light);
 }
 
 h1 {
@@ -73,18 +76,18 @@ h2 {
 h3 {
   font-weight: 600;
   font-size: 1.25rem;
-  color: var(--text-light);
+  color: var(--accent-light);
   margin-bottom: 1.25rem;
 }
 
 p {
   font-weight: 300;
   font-size: 1rem;
-  color: var(--text-light);
   margin-bottom: 1.75rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  color: var(--text-light);
 }
 
 /* Navbar */
@@ -92,9 +95,10 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: var(--bg-light);
-  border-bottom: 1px solid #d2d2d7;
-  z-index: 9999;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 1000;
 }
 
 nav.nav {
@@ -104,12 +108,14 @@ nav.nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 24px;
+  position: relative;
+  z-index: 1001;
 }
 
 .logo {
   font-weight: 900;
   font-size: 1.5rem;
-  color: var(--text-dark);
+  color: var(--text-light);
   user-select: none;
 }
 
@@ -127,7 +133,7 @@ nav.nav {
   font-weight: 600;
   font-size: 1rem;
   text-decoration: none;
-  color: var(--text-dark);
+  color: var(--text-light);
   padding: 6px 0;
   position: relative;
   user-select: none;
@@ -175,7 +181,7 @@ nav.nav {
 .hamburger span {
   width: 24px;
   height: 3px;
-  background-color: var(--text-dark);
+  background-color: var(--text-light);
   border-radius: 2px;
 }
 
@@ -183,14 +189,13 @@ nav.nav {
 .mobile-nav {
   display: none;
   flex-direction: column;
-  background: var(--bg-light);
-  border: 1px solid #d2d2d7;
-  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius);
   padding: 1rem;
   position: absolute;
   top: 70px;
   right: 24px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
   width: 180px;
   z-index: 10000;
 }
@@ -210,7 +215,7 @@ nav.nav {
   text-align: center;
   padding-left: 24px;
   padding-right: 24px;
-  color: var(--text-dark);
+  color: var(--text-light);
 }
 
 .hero h2 {
@@ -240,6 +245,7 @@ nav.nav {
   user-select: none;
   transition: background-color var(--transition);
   box-shadow: 0 8px 20px rgba(0, 113, 227, 0.4);
+  border: none;
 }
 
 .cta:hover,
@@ -290,19 +296,20 @@ nav.nav {
 
 /* Cards */
 .card {
-  background-color: var(--bg-section);
+  background-color: rgba(255, 255, 255, 0.15);
   border-radius: var(--radius);
   padding: 1.5rem;
-  box-shadow: 0 10px 30px var(--shadow);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   cursor: default;
   user-select: none;
   text-align: left;
   transition: box-shadow var(--transition);
+  color: var(--text-light);
 }
 
 .card:hover,
 .card:focus {
-  box-shadow: 0 14px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 14px 40px rgba(0, 113, 227, 0.45);
   outline: none;
 }
 
@@ -319,7 +326,7 @@ nav.nav {
 .card h3 {
   font-weight: 700;
   font-size: 1.25rem;
-  color: var(--text-dark);
+  color: var(--accent-light);
   margin-bottom: 0.25rem;
 }
 
@@ -415,27 +422,29 @@ form#contact-form {
   flex-direction: column;
   gap: 1.25rem;
   text-align: left;
+  color: var(--text-light);
 }
 
 form input,
 form textarea {
-  background-color: var(--bg-section);
+  background-color: rgba(255, 255, 255, 0.15);
   border: none;
   padding: 1rem 1.25rem;
   border-radius: var(--radius);
   font-size: 1rem;
   font-weight: 300;
-  color: var(--text-dark);
+  color: var(--text-light);
   resize: vertical;
-  transition: box-shadow var(--transition);
+  transition: box-shadow 0.3s ease;
   user-select: text;
-  box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.25);
 }
 
 form input:focus,
 form textarea:focus {
   outline: none;
-  box-shadow: 0 0 8px var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 form button {
@@ -464,7 +473,7 @@ form button:focus {
   position: fixed;
   width: 100%;
   height: 100vh;
-  background: var(--bg-light);
+  background: var(--bg-image);
   color: var(--accent);
   display: flex;
   align-items: center;
@@ -477,7 +486,6 @@ form button:focus {
 }
 
 /* Animations */
-
 @keyframes fadeUp {
   0% {
     opacity: 0;
