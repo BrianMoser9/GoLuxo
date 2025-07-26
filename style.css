@@ -396,12 +396,14 @@ nav.nav {
   align-items: center;
   z-index: 9999;
   backdrop-filter: blur(6px);
+  overflow-x: hidden; /* no horizontal scroll */
+  padding: 1rem; /* space on smaller screens */
 }
 
 #modal-body {
   max-width: 700px;
-  width: 90%;
-  background: rgba(255, 255, 255, 0.1); 
+  width: 90vw;
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(18px) saturate(120%);
   border-radius: 20px;
   padding: 2rem;
@@ -409,7 +411,10 @@ nav.nav {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   position: relative;
   overflow-y: auto;
+  overflow-x: hidden; /* no horizontal scroll */
   max-height: 90dvh;
+  box-sizing: border-box;
+  user-select: text;
 }
 
 #modal-body img {
@@ -417,69 +422,44 @@ nav.nav {
   border-radius: 12px;
   margin: 1rem 0;
   object-fit: cover;
+  user-select: none;
 }
 
 #modal-body h2 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  color: #fff;
+  font-weight: 900;
 }
 
 #modal-body p {
   line-height: 1.6;
   color: #ddd;
-}
-
-.modal-content {
-  background: var(--bg-light);
-  border-radius: var(--radius);
-  padding: 2rem;
-  max-width: 680px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-  position: relative;
-  max-height: 90vh;
-  overflow-y: auto;
-  user-select: text;
-}
-
-.modal-content h2 {
-  margin-top: 0;
-  font-weight: 900;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--text-dark);
-}
-
-.modal-content img {
-  width: 100%;
-  margin: 1rem 0;
-  border-radius: var(--radius);
-  object-fit: cover;
-  user-select: none;
-}
-
-.modal-content p {
   font-weight: 300;
   font-size: 1rem;
-  line-height: 1.6;
-  color: var(--text-light);
 }
 
-.close-modal {
+/* Close modal button */
+#closeModal {
   position: absolute;
   top: 1rem;
   right: 1rem;
+  z-index: 10; /* above modal content */
+  background: transparent;
+  border: none;
   font-size: 2rem;
-  color: var(--text-light);
+  color: #fff;
   cursor: pointer;
   user-select: none;
-  transition: color var(--transition);
+  transition: color 0.3s ease;
 }
 
-.close-modal:hover,
-.close-modal:focus {
+#closeModal:hover,
+#closeModal:focus {
   color: var(--accent);
   outline: none;
 }
+
 
 form#contact-form {
   max-width: 460px;
