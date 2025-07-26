@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600;900&display=swap');
 
 :root {
-  --bg-image: url('https://i.imgur.com/bf7sFwy.jpeg'); /* Your Imgur direct image */
+  --bg-image: url('https://i.imgur.com/bf7sFwy.jpeg'); 
   --text-dark: #1d1d1f;
   --text-light: #e0e0e0;
   --accent: #0071e3;
@@ -12,7 +12,6 @@
 }
 
 
-/* Base */
 body {
   margin: 0;
   font-family: var(--font-main);
@@ -25,7 +24,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Dark overlay to make text pop */
+
 body::before {
   content: "";
   position: fixed;
@@ -35,7 +34,7 @@ body::before {
   z-index: 0;
 }
 
-/* Container and layout */
+
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -45,9 +44,8 @@ body::before {
 }
 
 .section {
-  margin-top: 3rem; /* space from previous section */
-  margin-bottom: 3rem; /* space below as well, optional */
-  /* keep your existing styles */
+  margin-top: 3rem;
+  margin-bottom: 3rem; 
   padding: 6rem 0;
   max-width: 900px;
   margin-left: auto;
@@ -61,7 +59,6 @@ body::before {
 }
 
 
-/* Typography */
 h1, h2, h3, h4 {
   font-weight: 900;
   margin-bottom: 0.5rem;
@@ -95,7 +92,6 @@ p {
   color: var(--text-light);
 }
 
-/* Navbar */
 header {
   position: fixed;
   top: 0;
@@ -124,7 +120,6 @@ nav.nav {
   user-select: none;
 }
 
-/* Nav links */
 .nav-links,
 .mobile-nav {
   list-style: none;
@@ -153,7 +148,6 @@ nav.nav {
   outline: none;
 }
 
-/* Subtle underline on hover */
 .nav-links li a::after,
 .mobile-nav li a::after {
   content: '';
@@ -174,7 +168,6 @@ nav.nav {
   width: 100%;
 }
 
-/* Hamburger */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -190,7 +183,6 @@ nav.nav {
   border-radius: 2px;
 }
 
-/* Mobile nav */
 .mobile-nav {
   display: none;
   flex-direction: column;
@@ -209,7 +201,6 @@ nav.nav {
   display: flex;
 }
 
-/* Hero */
 .hero {
   padding-top: 6rem;
   min-height: 100vh;
@@ -238,7 +229,6 @@ nav.nav {
   margin-bottom: 2rem;
 }
 
-/* Call to action button */
 .cta {
   background-color: var(--accent);
   color: white;
@@ -261,7 +251,6 @@ nav.nav {
   box-shadow: 0 10px 25px rgba(0, 113, 227, 0.6);
 }
 
-/* Filters */
 .filters {
   display: flex;
   justify-content: center;
@@ -291,7 +280,6 @@ nav.nav {
   outline: none;
 }
 
-/* Cards grid */
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -299,7 +287,6 @@ nav.nav {
   margin-top: 1rem;
 }
 
-/* Cards */
 .card {
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: var(--radius);
@@ -318,7 +305,6 @@ nav.nav {
   outline: none;
 }
 
-/* Card image */
 .card img {
   width: 100%;
   border-radius: var(--radius);
@@ -327,7 +313,6 @@ nav.nav {
   aspect-ratio: 16 / 9;
 }
 
-/* Card texts */
 .card h3 {
   font-weight: 700;
   font-size: 1.25rem;
@@ -399,14 +384,13 @@ nav.nav {
 }
 
 
-/* Modal overlay */
 #modal {
   position: fixed;
   top: 0;
   left: 0;
   height: 100dvh;
   width: 100vw;
-  background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent overlay */
+  background: rgba(0, 0, 0, 0.5);
   display: none;
   justify-content: center;
   align-items: center;
@@ -414,11 +398,10 @@ nav.nav {
   backdrop-filter: blur(6px);
 }
 
-/* Modal content container */
 #modal-body {
   max-width: 700px;
   width: 90%;
-  background: rgba(255, 255, 255, 0.1); /* Glassy background */
+  background: rgba(255, 255, 255, 0.1); 
   backdrop-filter: blur(18px) saturate(120%);
   border-radius: 20px;
   padding: 2rem;
@@ -429,7 +412,6 @@ nav.nav {
   max-height: 90dvh;
 }
 
-/* Modal image and text inside */
 #modal-body img {
   width: 100%;
   border-radius: 12px;
@@ -482,7 +464,6 @@ nav.nav {
   color: var(--text-light);
 }
 
-/* Close modal */
 .close-modal {
   position: absolute;
   top: 1rem;
@@ -500,7 +481,6 @@ nav.nav {
   outline: none;
 }
 
-/* Contact form */
 form#contact-form {
   max-width: 460px;
   margin: 0 auto;
@@ -554,7 +534,6 @@ form button:focus {
   box-shadow: 0 10px 25px rgba(0, 113, 227, 0.6);
 }
 
-/* Preloader */
 #preloader {
   position: fixed;
   width: 100%;
@@ -571,7 +550,6 @@ form button:focus {
   transition: opacity 0.5s ease;
 }
 
-/* Card Buttons */
 .buttons {
   margin-top: 1rem;
   display: flex;
@@ -602,7 +580,6 @@ form button:focus {
   box-shadow: 0 0 0 2px rgba(0, 113, 227, 0.5);
 }
 
-/* Animations */
 @keyframes fadeUp {
   0% {
     opacity: 0;
@@ -614,7 +591,6 @@ form button:focus {
   }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   nav ul.nav-links {
     display: none;

@@ -1,11 +1,9 @@
-// Preloader fadeout
 window.addEventListener('load', () => {
   const preloader = document.getElementById('preloader');
   preloader.style.opacity = '0';
   setTimeout(() => preloader.style.display = 'none', 600);
 });
 
-// Hamburger menu toggle
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('nav ul');
 
@@ -13,7 +11,6 @@ hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('show');
 });
 
-// Theme toggle with localStorage
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
 
@@ -33,10 +30,8 @@ themeToggle.addEventListener('click', () => {
   setTheme(currentTheme === 'dark' ? 'light' : 'dark');
 });
 
-// Initialize theme on load
 setTheme(localStorage.getItem('theme') || 'dark');
 
-// Helper to create a card HTML string with dynamic buttons
 function createCard(item) {
   let buttonsHTML = '';
 
@@ -57,9 +52,8 @@ function createCard(item) {
   `;
 }
 
-// Render cards with filtering logic & cache busting
 async function loadCards(jsonUrl, containerId, filterId) {
-  const url = jsonUrl + '?t=' + new Date().getTime(); // bust cache
+  const url = jsonUrl + '?t=' + new Date().getTime(); 
   const res = await fetch(url);
   const data = await res.json();
   const container = document.getElementById(containerId);
@@ -67,7 +61,6 @@ async function loadCards(jsonUrl, containerId, filterId) {
 
   const categories = ['All', ...new Set(data.map(item => item.category))];
 
-  // Render filter buttons
   filterContainer.innerHTML = categories
     .map(cat => `<button class="filter-btn" data-cat="${cat}">${cat}</button>`)
     .join('');
@@ -90,7 +83,6 @@ async function loadCards(jsonUrl, containerId, filterId) {
   renderCards('All');
 }
 
-// Modal elements
 const modal = document.getElementById('modal');
 const modalBody = document.getElementById('modal-body');
 const closeModalBtn = document.getElementById('closeModal');
@@ -111,7 +103,6 @@ modal.addEventListener('click', e => {
   if (e.target === modal) hideModal();
 });
 
-// Add listeners to cards to open modal
 function addCardListeners() {
   document.querySelectorAll('.card').forEach(card => {
     card.onclick = () => {
@@ -134,7 +125,6 @@ function addCardListeners() {
   });
 }
 
-// Init all
 window.addEventListener('DOMContentLoaded', () => {
   loadCards('projects.json', 'projects-container', 'project-filters');
   loadCards('posts.json', 'posts-container', 'post-filters');
