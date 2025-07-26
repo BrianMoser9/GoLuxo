@@ -1,132 +1,142 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
+// Preloader fadeout
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  preloader.style.opacity = '0';
+  setTimeout(() => preloader.style.display = 'none', 600);
+});
+
+// Hamburger menu toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('nav ul');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
+
+// Theme toggle with localStorage
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+
+function setTheme(theme) {
+  if (theme === 'light') {
+    body.classList.add('light-mode');
+    themeToggle.textContent = '🌞';
+  } else {
+    body.classList.remove('light-mode');
+    themeToggle.textContent = '🌙';
+  }
+  localStorage.setItem('theme', theme);
+}
+
+themeToggle.addEventListener('click', () => {
+  const currentTheme = localStorage.getItem('theme') || 'dark';
+  setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+});
+
+// Initialize theme
+setTheme(localStorage.getItem('theme') || 'dark');
+
+// Helper: Create card HTML
+function createCard(item) {
+  return `
+    <div class="card" data-category="${item.category}" tabindex="0">
+      <img src="${item.image}" alt="${item.title}">
+      <h3>${item.title}</h3>
+      <small>${item.date} • ${item.category}</small>
+      <p>${item.description}</p>
+    </div>
+  `;
+}
+
+// Render cards into container
+async function loadCards(url, containerId, filterId) {
+  const res = await fetch(url);
+  const data = await res.json();
+  const container = document.getElementById(containerId);
+  const filterContainer = document.getElementById(filterId);
+
+  // Get unique categories for filters
+  const categories = ['All', ...new Set(data.map(item => item.category))];
+
+  // Render filter buttons
+  filterContainer.innerHTML = categories.map(cat =>
+    `<button class="filter-btn" data-cat="${cat}">${cat}</button>`
+  ).join('');
+
+  // Function to render cards by category
+  function renderCards(cat) {
+    const filtered = cat === 'All' ? data : data.filter(d => d.category === cat);
+    container.innerHTML = filtered.map(createCard).join('');
+    addCardListeners();
+  }
+
+  // Initial render all
+  renderCards('All');
+
+  // Add filter button listeners
+  filterContainer.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterContainer.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderCards(btn.getAttribute('data-cat'));
     });
+  });
 
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+  // Set first filter active
+  filterContainer.querySelector('.filter-btn').classList.add('active');
+}
+
+// Modal logic
+const modal = document.getElementById('modal');
+const modalBody = document.getElementById('modal-body');
+const closeModalBtn = document.getElementById('closeModal') || document.querySelector('.close-modal');
+
+// Show modal with content
+function showModal(content) {
+  modalBody.innerHTML = content;
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+// Hide modal
+function hideModal() {
+  modal.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+// Add event listener to close modal
+closeModalBtn?.addEventListener('click', hideModal);
+modal.addEventListener('click', e => {
+  if (e.target === modal) hideModal();
+});
+
+// Add click & key listener to cards for modal
+function addCardListeners() {
+  document.querySelectorAll('.card').forEach(card => {
+    card.onclick = () => {
+      const title = card.querySelector('h3').innerText;
+      const date = card.querySelector('small').innerText;
+      const imgSrc = card.querySelector('img').src;
+      const desc = card.querySelector('p').innerText;
+
+      const content = `
+        <h2>${title}</h2>
+        <small>${date}</small>
+        <img src="${imgSrc}" alt="${title}" style="width:100%; margin: 1rem 0; border-radius: 10px;" />
+        <p>${desc}</p>
+      `;
+      showModal(content);
+    };
+
+    // Accessibility: open modal on Enter key
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter') card.click();
     });
+  });
+}
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', (e) => {
-            e.preventDefault();
-            document.querySelector(anchor.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-            if (navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-            }
-        });
-    });
-
-    const particleContainer = document.querySelector('.particle-container');
-    for (let i = 0; i < 50; i++) {
-        const particle = document.createElement('div');
-        particle.classList.add('particle');
-        particle.style.width = `${Math.random() * 5 + 2}px`;
-        particle.style.height = particle.style.width;
-        particle.style.left = `${Math.random() * 100}vw`;
-        particle.style.top = `${Math.random() * 100}vh`;
-        particle.style.animationDuration = `${Math.random() * 5 + 5}s`;
-        particle.style.animationDelay = `${Math.random() * 5}s`;
-        particleContainer.appendChild(particle);
-    }
-
-    fetch('projects.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(data => {
-            const projectsContainer = document.getElementById('projects-container');
-            if (!data.projects || !Array.isArray(data.projects)) {
-                throw new Error('Invalid projects data format');
-            }
-            projectsContainer.innerHTML = '';
-            data.projects.forEach((project, index) => {
-                const projectCard = document.createElement('div');
-                projectCard.classList.add('card', 'fade-in');
-                projectCard.style.animationDelay = `${index * 0.2}s`;
-                projectCard.innerHTML = `
-                    <img src="${project.image || 'https://images.unsplash.com/photo-1516321310763-383e6f236bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'}" alt="${project.title}">
-                    <div class="card-content">
-                        <h3>${project.title}</h3>
-                        <p>${project.description}</p>
-                        <a href="${project.downloadLink}" target="_blank">Download</a>
-                        <a href="${project.demoLink}" target="_blank">Demo</a>
-                    </div>
-                `;
-                projectsContainer.appendChild(projectCard);
-            });
-        })
-        .catch(error => {
-            console.error('Error loading projects:', error);
-            const projectsContainer = document.getElementById('projects-container');
-            projectsContainer.innerHTML = '<p class="error">Failed to load projects. Please try again later.</p>';
-        });
-
-    fetch('posts.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(data => {
-            const blogContainer = document.getElementById('blog-container');
-            if (!data.posts || !Array.isArray(data.posts)) {
-                throw new Error('Invalid posts data format');
-            }
-            blogContainer.innerHTML = '';
-            data.posts.forEach((post, index) => {
-                const postCard = document.createElement('div');
-                postCard.classList.add('card', 'fade-in');
-                postCard.style.animationDelay = `${index * 0.2}s`;
-                postCard.innerHTML = `
-                    <img src="${post.image || 'https://images.unsplash.com/photo-1516321310763-383e6f236bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'}" alt="${post.title}">
-                    <div class="card-content">
-                        <h3>${post.title}</h3>
-                        <p><small>${new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</small></p>
-                        <p>${post.content}</p>
-                    </div>
-                `;
-                blogContainer.appendChild(postCard);
-            });
-        })
-        .catch(error => {
-            console.error('Error loading posts:', error);
-            const blogContainer = document.getElementById('blog-container');
-            blogContainer.innerHTML = '<p class="error">Failed to load blog posts. Please try again later.</p>';
-        });
-
-    const contactForm = document.getElementById('contact-form');
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        alert(`Thank you, ${name}! Your message has been sent.`);
-        contactForm.reset();
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in', 'slide-in');
-            }
-        });
-    }, { threshold: 0.2 });
-
-    document.querySelectorAll('.section, .card').forEach(element => {
-        observer.observe(element);
-    });
+// Init on DOMContentLoaded
+window.addEventListener('DOMContentLoaded', () => {
+  loadCards('projects.json', 'projects-container', 'project-filters');
+  loadCards('posts.json', 'posts-container', 'post-filters');
 });
