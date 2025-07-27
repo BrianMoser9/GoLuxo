@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitForge Studio - Transform Your Body</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-dumbbell"></i>
+                <span>FitForge Studio</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#programs">Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#transformations">Results</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#trainers">Trainers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="hero-title">TRANSFORM YOUR BODY</h1>
+                        <p class="hero-subtitle">Unleash your potential with our cutting-edge fitness programs</p>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">Clients Transformed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Expert Trainers</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">95%</span>
+                                <span class="stat-label">Success Rate</span>
+                            </div>
+                        </div>
+                        <div class="hero-buttons">
+                            <a href="#programs" class="btn btn-primary">Start Training</a>
+                            <a href="#transformations" class="btn btn-secondary">View Results</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-animation">
+                        <div class="dumbbell-spinner">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <div class="floating-elements">
+                            <div class="floating-item weight">
+                                <i class="fas fa-weight-hanging"></i>
+                            </div>
+                            <div class="floating-item heart">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <div class="floating-item trophy">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="programs" class="programs">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">OUR PROGRAMS</h2>
+                <p class="section-subtitle">Choose your path to greatness</p>
+            </div>
+            
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>BURN & SCULPT</h3>
+                    <p>High-intensity cardio and strength training for maximum fat burn</p>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check"></i> 45-minute sessions</li>
+                        <li><i class="fas fa-check"></i> HIIT training</li>
+                        <li><i class="fas fa-check"></i> Weight training</li>
+                    </ul>
+                    <span class="program-price">$99/month</span>
+                    <button class="btn btn-primary">Join Now</button>
+                </div>
+
+                <div class="program-card featured">
+                    <div class="program-badge">MOST POPULAR</div>
+                    <div class="program-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>POWER BUILD</h3>
+                    <p>Build muscle and strength with progressive overload training</p>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check"></i> 60-minute sessions</li>
+                        <li><i class="fas fa-check"></i> Progressive overload</li>
+                        <li><i class="fas fa-check"></i> Nutrition guidance</li>
+                    </ul>
+                    <span class="program-price">$149/month</span>
+                    <button class="btn btn-primary">Join Now</button>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3>ENDURANCE PRO</h3>
+                    <p>Improve stamina and endurance with specialized training</p>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check"></i> 90-minute sessions</li>
+                        <li><i class="fas fa-check"></i> Cardio focus</li>
+                        <li><i class="fas fa-check"></i> Recovery protocols</li>
+                    </ul>
+                    <span class="program-price">$129/month</span>
+                    <button class="btn btn-primary">Join Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="transformations" class="transformations">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">REAL TRANSFORMATIONS</h2>
+                <p class="section-subtitle">See the incredible results our clients achieve</p>
+            </div>
+            
+            <div class="transformation-slider">
+                <div class="transformation-item">
+                    <div class="before-after-container">
+                        <div class="before-after-slider">
+                            <div class="before-image">
+                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Before">
+                                <div class="image-label">BEFORE</div>
+                            </div>
+                            <div class="after-image">
+                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="After">
+                                <div class="image-label">AFTER</div>
+                            </div>
+                            <div class="slider-handle"></div>
+                        </div>
+                    </div>
+                    <div class="transformation-info">
+                        <h4>Sarah Johnson</h4>
+                        <p>Lost 45 pounds in 6 months</p>
+                        <div class="transformation-stats">
+                            <div class="stat">
+                                <span class="stat-value">-45 lbs</span>
+                                <span class="stat-label">Weight Loss</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">+15 lbs</span>
+                                <span class="stat-label">Muscle Gain</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">6 months</span>
+                                <span class="stat-label">Time Frame</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="transformation-item">
+                    <div class="before-after-container">
+                        <div class="before-after-slider">
+                            <div class="before-image">
+                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Before">
+                                <div class="image-label">BEFORE</div>
+                            </div>
+                            <div class="after-image">
+                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="After">
+                                <div class="image-label">AFTER</div>
+                            </div>
+                            <div class="slider-handle"></div>
+                        </div>
+                    </div>
+                    <div class="transformation-info">
+                        <h4>Mike Rodriguez</h4>
+                        <p>Gained 25 pounds of muscle</p>
+                        <div class="transformation-stats">
+                            <div class="stat">
+                                <span class="stat-value">+25 lbs</span>
+                                <span class="stat-label">Muscle Gain</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">+150 lbs</span>
+                                <span class="stat-label">Strength Increase</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">8 months</span>
+                                <span class="stat-label">Time Frame</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="trainers" class="trainers">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">EXPERT TRAINERS</h2>
+                <p class="section-subtitle">Meet the professionals who will guide your transformation</p>
+            </div>
+            
+            <div class="trainers-grid">
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Trainer 1">
+                    </div>
+                    <div class="trainer-info">
+                        <h4>Alex Thompson</h4>
+                        <span class="trainer-specialty">Strength & Conditioning</span>
+                        <p>Certified personal trainer with 8+ years of experience in strength training and muscle building.</p>
+                        <div class="trainer-stats">
+                            <div class="trainer-stat">
+                                <i class="fas fa-users"></i>
+                                <span>150+ Clients</span>
+                            </div>
+                            <div class="trainer-stat">
+                                <i class="fas fa-star"></i>
+                                <span>4.9 Rating</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Trainer 2">
+                    </div>
+                    <div class="trainer-info">
+                        <h4>Jessica Chen</h4>
+                        <span class="trainer-specialty">Cardio & HIIT</span>
+                        <p>Specialized in high-intensity interval training and endurance building programs.</p>
+                        <div class="trainer-stats">
+                            <div class="trainer-stat">
+                                <i class="fas fa-users"></i>
+                                <span>200+ Clients</span>
+                            </div>
+                            <div class="trainer-stat">
+                                <i class="fas fa-star"></i>
+                                <span>4.8 Rating</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Trainer 3">
+                    </div>
+                    <div class="trainer-info">
+                        <h4>Marcus Johnson</h4>
+                        <span class="trainer-specialty">Bodybuilding</span>
+                        <p>Former competitive bodybuilder with expertise in muscle hypertrophy and physique development.</p>
+                        <div class="trainer-stats">
+                            <div class="trainer-stat">
+                                <i class="fas fa-users"></i>
+                                <span>120+ Clients</span>
+                            </div>
+                            <div class="trainer-stat">
+                                <i class="fas fa-star"></i>
+                                <span>5.0 Rating</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <h2 class="section-title">GET STARTED TODAY</h2>
+                        <p class="contact-subtitle">Ready to transform your life? Contact us now!</p>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>123 Fitness Street<br>Downtown District</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>(555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Hours</h4>
+                                <p>Mon-Fri: 5AM-10PM<br>Sat-Sun: 6AM-8PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="contact-form">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Your Name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Your Email" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option>Select Program</option>
+                                    <option>Burn & Sculpt</option>
+                                    <option>Power Build</option>
+                                    <option>Endurance Pro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Start Your Journey</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-content">
+                        <h3><i class="fas fa-dumbbell"></i> FitForge Studio</h3>
+                        <p>Transform your body, transform your life. Join the FitForge family today.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="footer-content">
+                        <h4>Programs</h4>
+                        <ul>
+                            <li><a href="#programs">Burn & Sculpt</a></li>
+                            <li><a href="#programs">Power Build</a></li>
+                            <li><a href="#programs">Endurance Pro</a></li>
+                            <li><a href="#programs">Personal Training</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="footer-content">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Schedule</a></li>
+                            <li><a href="#">Membership</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-content">
+                        <h4>Newsletter</h4>
+                        <p>Get fitness tips and exclusive offers</p>
+                        <form class="newsletter-form">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Your email">
+                                <button class="btn btn-primary" type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FitForge Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

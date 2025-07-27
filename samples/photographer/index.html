@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShutterPeak Studio - Photography Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">
+        <i class="fas fa-camera-retro"></i> ShutterPeak Studio
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item">
+            <button class="btn btn-toggle-mode" id="toggleMode" title="Toggle light/dark mode"><i class="fas fa-moon"></i></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="hero">
+    <div class="container-fluid px-0">
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1600&q=80" alt="ShutterPeak Studio" class="img-fluid w-100">
+        <div class="hero-overlay">
+          <h1 class="hero-title">ShutterPeak Studio</h1>
+          <p class="hero-subtitle">Artistry in Every Frame</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="portfolio">
+    <div class="container-fluid px-0">
+      <div class="row g-0 gallery-row">
+        <div class="col-12">
+          <div class="gallery-title text-center mb-5">
+            <h2 class="section-title">Portfolio</h2>
+            <p class="section-subtitle">A curated selection of our favorite moments</p>
+          </div>
+        </div>
+        <!-- Gallery Images -->
+        <div class="col-12">
+          <div class="gallery-grid row g-0">
+            <div class="col-12 col-md-6 gallery-item">
+              <div class="gallery-img-wrapper">
+                <img data-src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" alt="Gallery 1" class="gallery-img lazy">
+                <div class="gallery-quote-overlay">
+                  <blockquote>"Photography is the story I fail to put into words."<br><span>— Destin Sparks</span></blockquote>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 gallery-item">
+              <div class="gallery-img-wrapper">
+                <img data-src="https://images.unsplash.com/photo-1465101178521-c1a9136a3c8b?auto=format&fit=crop&w=1200&q=80" alt="Gallery 2" class="gallery-img lazy">
+                <div class="gallery-quote-overlay">
+                  <blockquote>"A photograph is a secret about a secret."<br><span>— Diane Arbus</span></blockquote>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 gallery-item">
+              <div class="gallery-img-wrapper">
+                <img data-src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1200&q=80" alt="Gallery 3" class="gallery-img lazy">
+                <div class="gallery-quote-overlay">
+                  <blockquote>"You don’t take a photograph, you make it."<br><span>— Ansel Adams</span></blockquote>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 gallery-item">
+              <div class="gallery-img-wrapper">
+                <img data-src="https://images.unsplash.com/photo-1465101053361-7630c5588fe1?auto=format&fit=crop&w=1200&q=80" alt="Gallery 4" class="gallery-img lazy">
+                <div class="gallery-quote-overlay">
+                  <blockquote>"The best thing about a picture is that it never changes."<br><span>— Andy Warhol</span></blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3c8b?auto=format&fit=crop&w=800&q=80" alt="About ShutterPeak" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-lg-6">
+          <div class="about-content">
+            <h2 class="section-title">About</h2>
+            <p>ShutterPeak Studio is a collective of passionate photographers dedicated to capturing the world’s beauty, emotion, and stories. Our work blends technical mastery with creative vision, delivering images that resonate and inspire.</p>
+            <ul class="about-list">
+              <li><i class="fas fa-check-circle"></i> Award-winning team</li>
+              <li><i class="fas fa-check-circle"></i> Modern, artistic approach</li>
+              <li><i class="fas fa-check-circle"></i> Custom shoots & editing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="contact-info">
+            <h2 class="section-title">Contact</h2>
+            <p>Ready to collaborate or book a session? Reach out today!</p>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Location</h4>
+                <p>321 Lens Lane, Creative City</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h4>Phone</h4>
+                <p>(555) 135-2468</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p>info@shutterpeak.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="contact-form">
+            <form>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Your Name" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Your Email" required>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Subject" required>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="footer-content">
+            <h3><i class="fas fa-camera-retro"></i> ShutterPeak Studio</h3>
+            <p>Artistry in Every Frame. Your story, our lens.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="footer-content">
+            <h4>Newsletter</h4>
+            <p>Get updates and special offers</p>
+            <form class="newsletter-form">
+              <div class="input-group">
+                <input type="email" class="form-control" placeholder="Your email">
+                <button class="btn btn-primary" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom text-center mt-3">
+        <p>&copy; 2024 ShutterPeak Studio. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html> 

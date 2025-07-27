@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenEdge Landscaping</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top eco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#home">
+        <span class="leaf-logo">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2C16 2 28 8 28 20C28 26 22 30 16 30C10 30 4 26 4 20C4 8 16 2 16 2Z" fill="#43a047"/>
+            <path d="M16 30C16 30 16 18 28 20" stroke="#2e7d32" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        GreenEdge Landscaping
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-6">
+          <div class="hero-content">
+            <h1 class="hero-title">Eco-Stylish Landscaping for Modern Spaces</h1>
+            <p class="hero-subtitle">Transforming lawns and gardens with sustainable, creative design.</p>
+            <a href="#projects" class="btn btn-success hero-btn grass-hover">View Projects <i class="fas fa-leaf"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-plant-svg">
+            <svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg" class="growing-plant">
+              <path d="M110 210 Q120 150 110 110 Q100 70 110 10" stroke="#388e3c" stroke-width="8" fill="none"/>
+              <ellipse cx="110" cy="30" rx="18" ry="8" fill="#66bb6a"/>
+              <ellipse cx="110" cy="60" rx="14" ry="6" fill="#81c784"/>
+              <ellipse cx="110" cy="100" rx="10" ry="4" fill="#a5d6a7"/>
+            </svg>
+            <div class="animated-leaves">
+              <i class="fas fa-leaf leaf-1"></i>
+              <i class="fas fa-leaf leaf-2"></i>
+              <i class="fas fa-leaf leaf-3"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Project Showcase</h2>
+        <p class="section-subtitle">See the difference GreenEdge can make!</p>
+      </div>
+      <div class="row g-5">
+        <div class="col-md-6">
+          <div class="before-after-card">
+            <div class="before-label">Before</div>
+            <div class="after-label">After</div>
+            <div class="before-after-wrapper">
+              <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Before" class="before-img">
+              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="After" class="after-img">
+              <div class="slider-bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="before-after-card">
+            <div class="before-label">Before</div>
+            <div class="after-label">After</div>
+            <div class="before-after-wrapper">
+              <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Before" class="before-img">
+              <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80" alt="After" class="after-img">
+              <div class="slider-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Eco-friendly solutions for every landscape</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="service-card grass-hover">
+            <div class="service-icon"><i class="fas fa-seedling"></i></div>
+            <h4>Garden Design</h4>
+            <p>Custom, sustainable garden layouts for all spaces.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card grass-hover">
+            <div class="service-icon"><i class="fas fa-water"></i></div>
+            <h4>Irrigation Systems</h4>
+            <p>Efficient, eco-friendly watering solutions.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card grass-hover">
+            <div class="service-icon"><i class="fas fa-tree"></i></div>
+            <h4>Tree & Lawn Care</h4>
+            <p>Expert maintenance for healthy, lush landscapes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="contact" class="floating-contact-form">
+    <div class="contact-form-container">
+      <button class="close-contact" aria-label="Close"><i class="fas fa-times"></i></button>
+      <h3>Contact GreenEdge</h3>
+      <form id="contactForm">
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="Your Email" required>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Send <i class="fas fa-paper-plane"></i></button>
+        <div class="confirmation-checkmark animate__animated" id="confirmationCheckmark">
+          <i class="fas fa-check-circle"></i> Message Sent!
+        </div>
+      </form>
+    </div>
+    <button class="open-contact-btn btn btn-success"><i class="fas fa-envelope"></i> Contact Us</button>
+  </div>
+
+  <footer class="footer eco-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="footer-content">
+            <h3><span class="leaf-logo"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 2C16 2 28 8 28 20C28 26 22 30 16 30C10 30 4 26 4 20C4 8 16 2 16 2Z" fill="#43a047"/><path d="M16 30C16 30 16 18 28 20" stroke="#2e7d32" stroke-width="2" stroke-linecap="round"/></svg></span> GreenEdge Landscaping</h3>
+            <p>Eco-stylish landscaping for a greener tomorrow.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="footer-content">
+            <h4>Newsletter</h4>
+            <p>Get tips and updates from GreenEdge</p>
+            <form class="newsletter-form">
+              <div class="input-group">
+                <input type="email" class="form-control" placeholder="Your email">
+                <button class="btn btn-success" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 GreenEdge Landscaping. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html> 
