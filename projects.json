@@ -6,16 +6,16 @@
     "description": "If you are looking for a website, GoLuxo has you covered. Here are 10 sample websites I made, for you to see and know the real quality of our work. Contact us at the section below to get in touch with us.",
     "image": "https://imgur.com/tdMNEGZ.png",
     "buttons": [
-      { "name": "Pizza Place", "link": "https://github.com/myapp" },
-      { "name": "Photographer", "link": "https://myapp.live" },
-      { "name": "Pet Grooming", "link": "https://myapp.download" },
-      { "name": "Nail Salon", "link": "https://myapp.restaurant" },
-      { "name": "Landscaping Services", "link": "https://myapp.plumber" },
-      { "name": "Gym", "link": "https://myapp.electrician" },
-      { "name": "Coffee Shop", "link": "https://myapp.landscaper" },
-      { "name": "Boutique Clothing", "link": "https://myapp.fitness" },
-      { "name": "Barber Shop", "link": "https://myapp.consultant" },
-      { "name": "Auto Repair", "link": "https://myapp.realestate" }
+      { "name": "Pizza Place", "link": "https://goluxomgmt.com/samples/pizzaplace/" },
+      { "name": "Photographer", "link": "https://goluxomgmt.com/samples/photographer/" },
+      { "name": "Pet Grooming", "link": "https://goluxomgmt.com/samples/petgrooming/" },
+      { "name": "Nail Salon", "link": "https://goluxomgmt.com/samples/nailsalon/" },
+      { "name": "Landscaping Services", "link": "https://goluxomgmt.com/samples/landscaping/" },
+      { "name": "Gym", "link": "https://goluxomgmt.com/samples/gym/" },
+      { "name": "Coffee Shop", "link": "https://goluxomgmt.com/samples/coffeeshop/" },
+      { "name": "Boutique Clothing", "link": "https://goluxomgmt.com/samples/clothingstore/" },
+      { "name": "Barber Shop", "link": "https://goluxomgmt.com/samples/barbershop/" },
+      { "name": "Auto Repair", "link": "https://goluxomgmt.com/samples/autorepair/" }
     ]
   },
   {
