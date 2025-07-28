@@ -94,12 +94,14 @@
   <section id="contact" class="section">
     <div class="container">
       <h2 data-aos="fade-up">Contact Me</h2>
-      <form id="contact-form" data-aos="fade-up" data-aos-delay="100">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
+    <form id="contact-form" action="https://formspree.io/f/xovlwjoj" method="POST" data-aos="fade-up" data-aos-delay="100">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <input type="text" name="_gotcha" style="display:none">
+      <button type="submit">Send</button>
+    </form>
+
       <p data-aos="fade-up" data-aos-delay="200">Phone: +1 (647) 647-6292</p>
       <p data-aos="fade-up" data-aos-delay="200">Email: techgoluxo@gmail.com</p>
       <p data-aos="fade-up" data-aos-delay="200">Website: www.goluxomgmt.com</p>
